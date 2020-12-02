@@ -1,0 +1,25 @@
+{
+  "name": "test-server",
+  "version": "1.0.0",
+  "description": "Test server for JWT auth for test task",
+  "main": "app.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.3",
+    "express": "^4.17.1",
+    "express-validator": "^6.7.0",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "server-dev": "cross-env NODE_ENV=development node app.js",
+    "server": "cross-env NODE_ENV=production node app.js"
+  },
+  "keywords": [
+    "javascript",
+    "express",
+    "node.js"
+  ],
+  "author": "Ivan Alenin (aiscorp@yandex.ru)",
+  "license": "ISC"
+}
