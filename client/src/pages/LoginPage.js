@@ -1,20 +1,21 @@
 import React, {useState} from 'react'
-import {Button, Container, Form, Navbar} from 'react-bootstrap'
-import IfAuth from '../hoc/IfAuth'
-import Redirect, {Link, NavLink} from 'react-router-dom'
+import {Button, Container, Form} from 'react-bootstrap'
+import  {Link} from 'react-router-dom'
 import axios from 'axios'
 
 const LoginPage = props => {
   const [email, setEmail] = useState(null)
   const [password, setPassword] = useState(null)
 
-  const login = () => {
+  const login = async () => {
     const request = {
       email,
       password
     }
 
-    console.log('login', request)
+    console.log('login request', request)
+    const response = await axios.post('http://erp.apptrix.ru/api/clients/token/', request)
+    console.log('login response', response)
   }
 
   return (
