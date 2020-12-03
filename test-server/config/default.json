@@ -1,5 +1,0 @@
-{
-  "port": 5000,
-  "secret": "secret-string-321456",
-  "baseUrl": "http://localhost:5000"
-}
