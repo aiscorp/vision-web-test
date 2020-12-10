@@ -14,6 +14,8 @@ const withAuth = ComposedComponent => {
       setToken(token)
       setRefresh_token(refresh_token)
 
+      console.log('withAuth login', client_id)
+
       localStorage.setItem(storageName,
         JSON.stringify({
           client_id: client_id,

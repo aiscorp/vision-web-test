@@ -2,19 +2,26 @@ import React, {useState} from 'react'
 import {Button, Container, Form} from 'react-bootstrap'
 import  {Link} from 'react-router-dom'
 import axios from 'axios'
+import WithAuth from '../hoc/WithAuth'
 
 const LoginPage = props => {
+  const {user} = props
   const [email, setEmail] = useState(null)
   const [password, setPassword] = useState(null)
 
   const login = async () => {
     const request = {
-      email,
+      username: email,
       password
     }
 
     console.log('login request', request)
-    const response = await axios.post('http://erp.apptrix.ru/api/clients/token/', request)
+    const response = await axios.post('https://erp.apptrix.ru/api/clients/token/', request)
+
+    if(response.status === 200){
+      const data = response.data
+      user.login(data.client_id, data.access, data.refresh)
+    }
     console.log('login response', response)
   }
 
@@ -45,5 +52,5 @@ const LoginPage = props => {
   )
 }
 
-export default LoginPage
+export default WithAuth(LoginPage)
 
