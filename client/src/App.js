@@ -7,6 +7,7 @@ import LoginPage from './pages/LoginPage'
 import SignupPage from './pages/SignupPage'
 import LogoutPage from './pages/LogoutPage'
 import PrivateRoute from './hoc/PrivateRoute'
+import UnPrivateRoute from "./hoc/UnPrivateRoute";
 
 function App() {
 
@@ -14,8 +15,8 @@ function App() {
     <>
       <NavBar/>
       <Switch>
-        <Route path="/login" component={LoginPage}/>
-        <Route path="/signup" component={SignupPage}/>
+        <UnPrivateRoute path="/login" component={LoginPage}/>
+        <UnPrivateRoute path="/signup" component={SignupPage}/>
         <PrivateRoute path="/" component={HomePage}/>
         <PrivateRoute path="/logout" component={LogoutPage}/>
       </Switch>

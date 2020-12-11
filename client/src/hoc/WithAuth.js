@@ -14,8 +14,6 @@ const withAuth = ComposedComponent => {
       setToken(token)
       setRefresh_token(refresh_token)
 
-      console.log('withAuth login', client_id)
-
       localStorage.setItem(storageName,
         JSON.stringify({
           client_id: client_id,
@@ -33,12 +31,13 @@ const withAuth = ComposedComponent => {
 
     useEffect(() => {
       const data = JSON.parse(localStorage.getItem(storageName))
+      console.log('withAuth useEffect', data)
 
       if (data && data.token) {
         login(data.client_id, data.token, data.refresh_token)
       }
       setReady(true)
-    }, [login])
+    }, [])
 
     const user = {
       authState: !!token,
@@ -49,6 +48,8 @@ const withAuth = ComposedComponent => {
       login: login,
       logout: logout
     }
+
+    console.log('withAuth user', user)
 
     return <ComposedComponent user={user} {...props}/>
   })

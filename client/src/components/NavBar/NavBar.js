@@ -15,12 +15,12 @@ const NavBar = props => {
         <Navbar.Collapse>
           <Nav className="mr-auto">
             <IfNotAuth>
-              <NavLink exact to="/" activeClassName="active" className="nav-link">Home</NavLink>
               <NavLink exact to="/signup" activeClassName="active" className="nav-link">Sign Up</NavLink>
               <NavLink exact to="/login" activeClassName="active" className="nav-link">Login</NavLink>
             </IfNotAuth>
 
             <IfAuth>
+              <NavLink exact to="/" activeClassName="active" className="nav-link">Home</NavLink>
               <NavLink exact to="/logout" activeClassName="active" className="nav-link">Logout</NavLink>
             </IfAuth>
           </Nav>

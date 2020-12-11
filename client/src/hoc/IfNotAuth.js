@@ -1,8 +1,9 @@
 import React from 'react'
 import withAuth from './WithAuth'
 
-const IfAuth = (props) => {
+const IfNotAuth = (props) => {
   const {user, children, ...rest} = props
+  console.log('IfNotAuth', !user.authState)
 
   if (!user.authState)
     return React.Children.map(children, (child) => {
@@ -13,4 +14,4 @@ const IfAuth = (props) => {
     return null
 }
 
-export default withAuth(IfAuth)
+export default withAuth(IfNotAuth)

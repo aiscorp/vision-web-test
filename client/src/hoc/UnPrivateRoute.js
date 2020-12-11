@@ -2,12 +2,10 @@ import React from 'react'
 import {Route, Redirect} from 'react-router-dom'
 import withAuth from './WithAuth'
 
-const PrivateRoute = (props) => {
+const UnPrivateRoute = (props) => {
     const {user, component, ...rest} = props
 
-    console.log('PrivateRoute', user.authState)
-
-    if (user.authState)
+    if (!user.authState)
         return (
             <Route {...rest} component={component}/>
         )
@@ -20,7 +18,7 @@ const PrivateRoute = (props) => {
                         <Redirect
                             to={
                                 {
-                                    pathname: '/login',
+                                    pathname: '/home',
                                     state: {from: location}
                                 }}
                         />
@@ -29,5 +27,5 @@ const PrivateRoute = (props) => {
         )
 }
 
-export default withAuth(PrivateRoute)
+export default withAuth(UnPrivateRoute)
 

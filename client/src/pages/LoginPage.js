@@ -16,7 +16,7 @@ const LoginPage = props => {
     }
 
     console.log('login request', request)
-    const response = await axios.post('https://erp.apptrix.ru/api/clients/token/', request)
+    const response = await axios.post('http://erp.apptrix.ru/api/clients/token/', request)
 
     if(response.status === 200){
       const data = response.data
