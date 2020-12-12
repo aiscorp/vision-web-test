@@ -5,8 +5,6 @@ import withAuth from './WithAuth'
 const PrivateRoute = (props) => {
     const {user, component, ...rest} = props
 
-    console.log('PrivateRoute', user.authState)
-
     if (user.authState)
         return (
             <Route {...rest} component={component}/>
@@ -29,5 +27,6 @@ const PrivateRoute = (props) => {
         )
 }
 
+// export default PrivateRoute
 export default withAuth(PrivateRoute)
 

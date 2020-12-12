@@ -3,7 +3,6 @@ import withAuth from './WithAuth'
 
 const IfAuth = (props) => {
   const {user, children, ...rest} = props
-  console.log('IfAuth', user.authState)
 
   if (user.authState)
     return React.Children.map(children, (child) => {

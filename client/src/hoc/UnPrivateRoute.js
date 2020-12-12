@@ -18,7 +18,7 @@ const UnPrivateRoute = (props) => {
                         <Redirect
                             to={
                                 {
-                                    pathname: '/home',
+                                    pathname: '/',
                                     state: {from: location}
                                 }}
                         />
@@ -27,5 +27,6 @@ const UnPrivateRoute = (props) => {
         )
 }
 
+// export default UnPrivateRoute
 export default withAuth(UnPrivateRoute)
 

@@ -3,7 +3,6 @@ import withAuth from './WithAuth'
 
 const IfNotAuth = (props) => {
   const {user, children, ...rest} = props
-  console.log('IfNotAuth', !user.authState)
 
   if (!user.authState)
     return React.Children.map(children, (child) => {

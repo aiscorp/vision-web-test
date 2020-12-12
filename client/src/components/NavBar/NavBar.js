@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link, NavLink} from 'react-router-dom'
-import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
+import {Navbar, Nav} from 'react-bootstrap'
 import IfAuth from '../../hoc/IfAuth'
 import IfNotAuth from '../../hoc/IfNotAuth'
 
