@@ -5,10 +5,11 @@
 ***Technology stack: `React.JS, Redux`*** 
 
 ### 📗1. Task  
-...  
+Create an application with a router, JWT authorization, and axios with an additional middleware.   
+Provide private routing with redirection to the authorization page, if the user is authorized to display information about it. 
 
 ### 📗2. Source data  
-... 
+The active server and API to the server.
 
 ### 📗3. Links and demo  
 Repo: https://github.com/aiscorp/vision-web-test   
