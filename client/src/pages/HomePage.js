@@ -7,7 +7,6 @@ const HomePage = props => {
     const {user} = props
     const [info, setInfo] = useState()
 
-    //http://erp.apptrix.ru/api/clients/RU-000000/
     useEffect(() => {
         axios.get(`http://erp.apptrix.ru/api/clients/${user.client_id}/`)
             .then(res => {
@@ -23,9 +22,23 @@ const HomePage = props => {
     return (
         <Container className="my-2">
             <h2>Home page</h2>
-            <p>{!!info && JSON.stringify(info)}</p>
+            {!!info && userInfo(info)}
         </Container>
     )
 }
 
 export default withAuth(HomePage)
+
+const userInfo = (info) => (
+    <>
+        <img src={info.avatar} style={{height: '128px'}} alt='avatar'/>
+        <h3>{`Hello ${info.name} ${info.surname}!`}</h3>
+        <p>Hear is information stored in your account:</p>
+        <p>{`Name: ${info.name}`}</p>
+        <p>{`Surname: ${info.surname}`}</p>
+        <p>{`Email: ${info.email}`}</p>
+        <p>{`Phone: ${info.phone}`}</p>
+        <p>{`Client ID: ${info.client_id}`}</p>
+        <p>{`Invited by: ${info.invited_by.name} ${info.invited_by.surname}`}</p>
+    </>
+)
