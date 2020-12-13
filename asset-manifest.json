@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/vision-web-test/static/css/main.82cdf6ae.chunk.css",
-    "main.js": "/vision-web-test/static/js/main.055a9c6d.chunk.js",
-    "main.js.map": "/vision-web-test/static/js/main.055a9c6d.chunk.js.map",
+    "main.js": "/vision-web-test/static/js/main.8102dd8a.chunk.js",
+    "main.js.map": "/vision-web-test/static/js/main.8102dd8a.chunk.js.map",
     "runtime-main.js": "/vision-web-test/static/js/runtime-main.40083e6a.js",
     "runtime-main.js.map": "/vision-web-test/static/js/runtime-main.40083e6a.js.map",
-    "static/js/2.f9d92ff9.chunk.js": "/vision-web-test/static/js/2.f9d92ff9.chunk.js",
-    "static/js/2.f9d92ff9.chunk.js.map": "/vision-web-test/static/js/2.f9d92ff9.chunk.js.map",
+    "static/js/2.514ee49e.chunk.js": "/vision-web-test/static/js/2.514ee49e.chunk.js",
+    "static/js/2.514ee49e.chunk.js.map": "/vision-web-test/static/js/2.514ee49e.chunk.js.map",
     "index.html": "/vision-web-test/index.html",
     "static/css/main.82cdf6ae.chunk.css.map": "/vision-web-test/static/css/main.82cdf6ae.chunk.css.map",
-    "static/js/2.f9d92ff9.chunk.js.LICENSE.txt": "/vision-web-test/static/js/2.f9d92ff9.chunk.js.LICENSE.txt"
+    "static/js/2.514ee49e.chunk.js.LICENSE.txt": "/vision-web-test/static/js/2.514ee49e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.40083e6a.js",
-    "static/js/2.f9d92ff9.chunk.js",
+    "static/js/2.514ee49e.chunk.js",
     "static/css/main.82cdf6ae.chunk.css",
-    "static/js/main.055a9c6d.chunk.js"
+    "static/js/main.8102dd8a.chunk.js"
   ]
 }
