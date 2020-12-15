@@ -2,7 +2,7 @@
 
 ## Test app for Vision veb  
 
-***Technology stack: `React.JS, Redux`*** 
+***Technology stack: `React.JS, React Router, JWT, AXIOS`*** 
 
 ### 📗1. Task  
 Create an application with a router, JWT authorization, and axios with an additional middleware.   
@@ -10,6 +10,7 @@ Provide private routing with redirection to the authorization page, if the user 
 
 ### 📗2. Source data  
 The active server and API to the server.
+***The server API works over http and becouse of that GH pages doesn't work properly.***
 
 ### 📗3. Links and demo  
 Repo: https://github.com/aiscorp/vision-web-test   
